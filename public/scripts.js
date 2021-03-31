@@ -5,6 +5,7 @@ async function diningHalls() {
   const info = document.querySelector('.target');
 
   arrayDining.forEach((i) => {
+    const createRows = document.createElement('tr');
     createRows.innerHTML = `
         <td>${i.hall_id}</td>
         <td>${i.hall_name}</td>
