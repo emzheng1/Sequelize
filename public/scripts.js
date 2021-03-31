@@ -1,7 +1,17 @@
-async function windowActions() {
-    const request = await fetch(endpoint);
-    const dining = await request.json();
+async function diningHalls() {
+  const request = await fetch('/api/dining');
+  const diningInfo = await request.json();
+  
+  const arrayDining = diningInfo.data;
+  const info = document.querySelector('.target');
 
-    return hall_id;
+  arrayDining.forEach((i) => {
+    createRows.innerHTML = `
+        <td>${i.hall_id}</td>
+        <td>${i.hall_name}</td>
+        <td>${i.hall_address}</td>
+        `;
+    info.append(createRows);
+  });
 }
-window.onload = windowActions;
+window.onload = diningHalls;
