@@ -1,7 +1,6 @@
 async function diningHalls() {
   const request = await fetch('/api/dining');
   const diningInfo = await request.json();
-  
   const arrayDining = diningInfo.data;
   const info = document.querySelector('.target');
 
