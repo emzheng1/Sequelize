@@ -9,11 +9,10 @@
 </head>
 <body>
     <h1 class="has-text-centered is-size-1">Meal Retrieval Demo</h1>
-    <div id="chart"></div>
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
     <table class="table" id="meals">
         <thead>
             <tr>
-                <th>#</th>
                 <th>Meal ID</th>
                 <th>Meal Name</th>
                 <th>Category</th>
@@ -30,6 +29,7 @@
         <tbody class="target"></tbody>
     </table>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
     <script src="./demo.js"></script>
 </body>
 </html>
